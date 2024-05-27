@@ -24,12 +24,12 @@ X_scaled = scaler.fit_transform(X)
 
 # Create the target score using the initial weights (for initial ranking, if needed)
 initial_weights = {
-    'AVG': 3,
+    'AVG': 4,
     'OBP': 2,
-    'SLG': 3,
+    'SLG': 2,
     'OPS': 5,
     'RBI': 3,
-    'R': 3,
+    'R': 2,
     'H': 4,
     'D': 2,
     'T': 3,
@@ -40,7 +40,7 @@ initial_weights = {
     'BB': 3,
     'SO': -2,
     'GDP': -4,
-    'MH': 3,
+    'MH': 2,
     'RISP': 3,
     'PH_BA': 3,
 }
