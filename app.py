@@ -8,7 +8,7 @@ file_path = 'C:/Users/kimdo/Desktop/wCIS/stats_2002to2023.csv'
 data = pd.read_csv(file_path)
 
 # Select relevant columns for features and target
-features = ['AVG', 'OBP', 'SLG', 'OPS', 'RBI', 'R', 'HR', 'TB', 'SAC', 'SF', 'BB', 'SO', 'GDP', 'MH', 'RISP', 'PH_BA']
+features = ['AVG', 'OBP', 'SLG', 'OPS', 'RBI', 'R', 'H', 'D', 'T', 'HR', 'TB', 'SAC', 'SF', 'BB', 'SO', 'GDP', 'MH', 'RISP', 'PH_BA']
 
 # Ensure the RBI column exists
 if 'RBI' not in data.columns:
@@ -30,7 +30,10 @@ initial_weights = {
     'OPS': 5,
     'RBI': 3,
     'R': 3,
-    'HR': 4,
+    'H': 4,
+    'D': 2,
+    'T': 3,
+    'HR': 3,
     'TB': 2,
     'SAC': 2,
     'SF': 2,
@@ -38,7 +41,7 @@ initial_weights = {
     'SO': -2,
     'GDP': -4,
     'MH': 3,
-    'RISP': 4,
+    'RISP': 3,
     'PH_BA': 3,
 }
 data['Initial_Score'] = (
@@ -48,6 +51,9 @@ data['Initial_Score'] = (
     initial_weights['OPS'] * data['OPS'] +
     initial_weights['RBI'] * data['RBI'] +
     initial_weights['R'] * data['R'] +
+    initial_weights['H'] * data['H'] + 
+    initial_weights['D'] * data['D'] +
+    initial_weights['T'] * data['T'] +
     initial_weights['HR'] * data['HR'] +
     initial_weights['TB'] * data['TB'] +
     initial_weights['SAC'] * data['SAC'] +
