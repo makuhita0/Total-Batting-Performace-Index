@@ -9,4 +9,4 @@
 2024 신한 SOL KBO리그에서 뛰고 있는 선수들의 wRC+ 순위를 바탕으로 상위권, 중위권, 하위권 선수를 선정해 해당 선수에 대한 점수를 부여한다. 이 데이터를 바탕으로 학습을 시킨다. 이것을 통해 2002년~2023년 타자들의 성적을 바탕으로 점수를 예측한다. 이렇게 예측된 점수를 바탕으로 선수들의 순위를 매긴다.
 
 # TPBI 순위(~30위)
-![image](https://github.com/makuhita0/Total-Batting-Performace-Index/assets/139422703/612fffb1-eac8-4e72-b7e1-4f3085b110cd)
+![image](https://github.com/makuhita0/Total-Batting-Performace-Index/assets/139422703/c722b35e-b92a-4665-bfe7-48f5ec2f5755)
